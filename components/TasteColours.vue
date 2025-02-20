@@ -9,7 +9,13 @@
       <v-col cols="12">
         <v-row>
           <v-col cols="12" lg="4" class="color-container">
-            <v-img src="/images/red-image.png" alt="Red" />
+            <div class="custom-image-container">
+              <v-img
+                src="/images/red-image.png"
+                alt="Red"
+                class="custom-image"
+              />
+            </div>
             <h3>
               {{ t('$vuetify.custom.red') }}
             </h3>
@@ -18,7 +24,13 @@
             </p>
           </v-col>
           <v-col cols="12" lg="4" class="color-container">
-            <v-img src="/images/green-image.png" alt="Red" />
+            <div class="custom-image-container">
+              <v-img
+                src="/images/green-image.png"
+                alt="Green"
+                class="custom-image"
+              />
+            </div>
             <h3>
               {{ t('$vuetify.custom.green') }}
             </h3>
@@ -27,7 +39,13 @@
             </p>
           </v-col>
           <v-col cols="12" lg="4" class="color-container">
-            <v-img src="/images/white-image.png" alt="Red" />
+            <div class="custom-image-container">
+              <v-img
+                src="/images/white-image.png"
+                alt="Red"
+                class="custom-image"
+              />
+            </div>
             <h3>
               {{ t('$vuetify.custom.white') }}
             </h3>
@@ -64,5 +82,17 @@ h2 {
 .color-container {
   text-align: center;
   padding: 1rem;
+}
+
+.custom-image-container {
+  overflow: hidden;
+}
+
+.custom-image {
+  transition: all .2s ease-in-out;
+}
+
+.custom-image:hover {
+  transform: scale(1.1);
 }
 </style>

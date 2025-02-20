@@ -45,15 +45,15 @@
               />
             </div>
           </v-col>
-          <v-col cols="12" lg="6" class="a">
-            <div class="b custom-image-container">
+          <v-col cols="12" lg="6" class="side-images-container">
+            <div class="half-height-image custom-image-container">
               <v-img
                 src="/images/second-image.png"
                 class="custom-image"
                 @click="HandleImageClick('/images/second-image.png')"
               />
             </div>
-            <div class="c custom-image-container">
+            <div class="half-height-image custom-image-container">
               <v-img
                 src="/images/third-image.png"
                 class="custom-image"
@@ -142,19 +142,12 @@ h1 {
   color: #fff;
 }
 
-.a {
-  background-color: lightcoral;
+.side-images-container {
   display: flex;
   flex-direction: column;
 }
 
-.b {
-  background-color: lightblue;
-  flex: 0.5;
-}
-
-.c {
-  background-color: lightgreen;
+.half-height-image {
   flex: 0.5;
 }
 

@@ -12,67 +12,75 @@
             cols="12"
             lg="4"
             class="color-container"
-            tag="a"
-            @click="HandleItemClick($event, 'red')"
           >
             <div class="custom-image-container">
               <v-img
                 src="/images/red-image.png"
                 alt="Red"
                 class="custom-image"
+                @click="HandleImageClick('/images/red-image.png')"
               />
             </div>
-            <h3>
-              {{ t('$vuetify.custom.red') }}
-            </h3>
-            <p>
-              {{ t('$vuetify.custom.redDescription') }}
-            </p>
+            <a @click="HandleItemClick($event, 'red')">
+              <h3>
+                {{ t('$vuetify.custom.red') }}
+              </h3>
+              <p>
+                {{ t('$vuetify.custom.redDescription') }}
+              </p>
+            </a>
           </v-col>
           <v-col
             cols="12" lg="4"
             class="color-container"
-            tag="a"
-            @click="HandleItemClick($event, 'green')"
           >
             <div class="custom-image-container">
               <v-img
                 src="/images/green-image.png"
                 alt="Green"
                 class="custom-image"
+                @click="HandleImageClick('/images/green-image.png')"
               />
             </div>
-            <h3>
-              {{ t('$vuetify.custom.green') }}
-            </h3>
-            <p>
-              {{ t('$vuetify.custom.greenDescription') }}
-            </p>
+            <a @click="HandleItemClick($event, 'green')">
+              <h3>
+                {{ t('$vuetify.custom.green') }}
+              </h3>
+              <p>
+                {{ t('$vuetify.custom.greenDescription') }}
+              </p>
+            </a>       
           </v-col>
           <v-col
             cols="12"
             lg="4"
             class="color-container"
-            tag="a"
-            @click="HandleItemClick($event, 'white')"
           >
             <div class="custom-image-container">
               <v-img
                 src="/images/white-image.png"
-                alt="Red"
+                alt="White"
                 class="custom-image"
+                @click="HandleImageClick('/images/white-image.png')"
               />
             </div>
-            <h3>
-              {{ t('$vuetify.custom.white') }}
-            </h3>
-            <p>
-              {{ t('$vuetify.custom.whiteDescription') }}
-            </p>
+            <a @click="HandleItemClick($event, 'white')">
+              <h3>
+                {{ t('$vuetify.custom.white') }}
+              </h3>
+              <p>
+                {{ t('$vuetify.custom.whiteDescription') }}
+              </p>
+            </a>
           </v-col>
         </v-row>
       </v-col>
     </v-row>
+    <v-dialog v-model="showModal" max-width="600">
+      <v-card clas="pa-8">
+        <v-img :src="modalImagePath" />
+      </v-card>
+    </v-dialog>
   </article>
 </template>
 
@@ -81,8 +89,17 @@ import { useLocale } from 'vuetify';
 
 const { t } = useLocale();
 
+const showModal = ref(false);
+
+const modalImagePath = ref('');
+
 function HandleItemClick(e: Event, target: string) {
   console.log(`${target} element has been clicked with the following event: `, e);
+}
+
+function HandleImageClick(path: string) {
+  showModal.value = true;
+  modalImagePath.value = path;
 }
 
 defineComponent({
@@ -115,6 +132,7 @@ h2 {
 
 .custom-image:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 a {

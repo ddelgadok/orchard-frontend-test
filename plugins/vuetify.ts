@@ -9,6 +9,15 @@ import en from '../locales/en';
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
+    display: {
+      thresholds: {
+        xs: 0,
+        sm: 320,
+        md: 540,
+        lg: 800,
+        xl: 1280,
+      }
+    },
     theme: {
       defaultTheme: 'dark'
     },

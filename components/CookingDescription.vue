@@ -36,12 +36,12 @@
       </v-col>
       <v-col cols="12" lg="8" order-lg="1">
         <v-row no-gutters>
-          <v-col cols="6">
+          <v-col cols="12" lg="6">
             <v-img
               src="/images/first-image.png"
             />
           </v-col>
-          <v-col cols="6" class="a">
+          <v-col cols="12" lg="6" class="a">
             <div class="b">
               <v-img
                 src="/images/second-image.png"

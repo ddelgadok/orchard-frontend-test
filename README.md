@@ -1,2 +1,1 @@
-# orchard-frontend-test
-Orchard Frontend Test by Daniel Delgado
+# Orchard Frontend Test by Daniel F. Delgado

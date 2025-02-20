@@ -8,7 +8,13 @@
       </v-col>
       <v-col cols="12">
         <v-row>
-          <v-col cols="12" lg="4" class="color-container">
+          <v-col
+            cols="12"
+            lg="4"
+            class="color-container"
+            tag="a"
+            @click="HandleItemClick($event, 'red')"
+          >
             <div class="custom-image-container">
               <v-img
                 src="/images/red-image.png"
@@ -23,7 +29,12 @@
               {{ t('$vuetify.custom.redDescription') }}
             </p>
           </v-col>
-          <v-col cols="12" lg="4" class="color-container">
+          <v-col
+            cols="12" lg="4"
+            class="color-container"
+            tag="a"
+            @click="HandleItemClick($event, 'green')"
+          >
             <div class="custom-image-container">
               <v-img
                 src="/images/green-image.png"
@@ -38,7 +49,13 @@
               {{ t('$vuetify.custom.greenDescription') }}
             </p>
           </v-col>
-          <v-col cols="12" lg="4" class="color-container">
+          <v-col
+            cols="12"
+            lg="4"
+            class="color-container"
+            tag="a"
+            @click="HandleItemClick($event, 'white')"
+          >
             <div class="custom-image-container">
               <v-img
                 src="/images/white-image.png"
@@ -63,6 +80,10 @@
 import { useLocale } from 'vuetify';
 
 const { t } = useLocale();
+
+function HandleItemClick(e: Event, target: string) {
+  console.log(`${target} element has been clicked with the following event: `, e);
+}
 
 defineComponent({
   name: 'TasteColours',
@@ -94,5 +115,9 @@ h2 {
 
 .custom-image:hover {
   transform: scale(1.1);
+}
+
+a {
+  cursor: pointer;
 }
 </style>

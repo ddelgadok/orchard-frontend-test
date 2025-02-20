@@ -13,7 +13,7 @@
             lg="4"
             class="color-container"
           >
-            <div class="custom-image-container">
+            <div class="custom-image-container mb-4">
               <v-img
                 src="/images/red-image.png"
                 alt="Red"
@@ -22,10 +22,10 @@
               />
             </div>
             <a @click="HandleItemClick($event, 'red')">
-              <h3>
+              <h3 class="item-title">
                 {{ t('$vuetify.custom.red') }}
               </h3>
-              <p>
+              <p class="item-description">
                 {{ t('$vuetify.custom.redDescription') }}
               </p>
             </a>
@@ -34,7 +34,7 @@
             cols="12" lg="4"
             class="color-container"
           >
-            <div class="custom-image-container">
+            <div class="custom-image-container mb-4">
               <v-img
                 src="/images/green-image.png"
                 alt="Green"
@@ -43,10 +43,10 @@
               />
             </div>
             <a @click="HandleItemClick($event, 'green')">
-              <h3>
+              <h3 class="item-title">
                 {{ t('$vuetify.custom.green') }}
               </h3>
-              <p>
+              <p class="item-description">
                 {{ t('$vuetify.custom.greenDescription') }}
               </p>
             </a>       
@@ -60,15 +60,15 @@
               <v-img
                 src="/images/white-image.png"
                 alt="White"
-                class="custom-image"
+                class="custom-image mb-4"
                 @click="HandleImageClick('/images/white-image.png')"
               />
             </div>
             <a @click="HandleItemClick($event, 'white')">
-              <h3>
+              <h3 class="item-title">
                 {{ t('$vuetify.custom.white') }}
               </h3>
-              <p>
+              <p class="item-description">
                 {{ t('$vuetify.custom.whiteDescription') }}
               </p>
             </a>
@@ -137,5 +137,27 @@ h2 {
 
 a {
   cursor: pointer;
+}
+
+.item-description {
+  font-size: 21px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.item-title {
+  font-size: 21px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
 }
 </style>

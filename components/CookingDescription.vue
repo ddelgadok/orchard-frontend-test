@@ -1,8 +1,7 @@
 <template>
   <article>
     <v-row>
-      <v-col cols="12" lg="8"></v-col>
-      <v-col cols="12" lg="4">
+      <v-col cols="12" lg="4" order-lg="2">
         <v-row no-gutters>
           <v-col cols="12" class="title-container">
             <h1>
@@ -16,6 +15,27 @@
             <p>
               {{ t('$vuetify.custom.cookingDescription') }}
             </p>
+          </v-col>
+        </v-row>
+      </v-col>
+      <v-col cols="12" lg="8" order-lg="1">
+        <v-row no-gutters>
+          <v-col cols="6">
+            <v-img
+              src="/images/first-image.png"
+            />
+          </v-col>
+          <v-col cols="6" class="a">
+            <div class="b">
+              <v-img
+                src="/images/second-image.png"
+              />
+            </div>
+            <div class="c">
+              <v-img
+                src="/images/third-image.png"
+              />
+            </div>
           </v-col>
         </v-row>
       </v-col>
@@ -42,5 +62,21 @@ defineComponent({
 
 h1 {
   text-transform: uppercase;
+}
+
+.a {
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: column;
+}
+
+.b {
+  background-color: lightblue;
+  flex: 0.5;
+}
+
+.c {
+  background-color: lightgreen;
+  flex: 0.5;
 }
 </style>

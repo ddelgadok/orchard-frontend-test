@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <main>
     <CookingDescription />
     <TasteColours />
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">

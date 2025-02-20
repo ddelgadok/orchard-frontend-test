@@ -9,6 +9,9 @@ import en from '../locales/en';
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
+    theme: {
+      defaultTheme: 'dark'
+    },
     locale: {
       locale: 'es',
       messages: {

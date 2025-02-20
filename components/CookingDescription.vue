@@ -41,6 +41,7 @@
               <v-img
                 src="/images/first-image.png"
                 class="custom-image"
+                @click="HandleImageClick('/images/first-image.png')"
               />
             </div>
           </v-col>
@@ -49,18 +50,25 @@
               <v-img
                 src="/images/second-image.png"
                 class="custom-image"
+                @click="HandleImageClick('/images/second-image.png')"
               />
             </div>
             <div class="c custom-image-container">
               <v-img
                 src="/images/third-image.png"
                 class="custom-image"
+                @click="HandleImageClick('/images/third-image.png')"
               />
             </div>
           </v-col>
         </v-row>
       </v-col>
     </v-row>
+    <v-dialog v-model="showModal" max-width="600">
+      <v-card clas="pa-8">
+        <v-img :src="modalImagePath" />
+      </v-card>
+    </v-dialog>
   </article>
 </template>
 
@@ -68,6 +76,15 @@
 import { useLocale } from 'vuetify';
 
 const { t } = useLocale();
+
+const showModal = ref(false);
+
+const modalImagePath = ref('');
+
+function HandleImageClick(path: string) {
+  showModal.value = true;
+  modalImagePath.value = path;
+}
 
 defineComponent({
   name: 'CookingDescription',
@@ -147,6 +164,7 @@ h1 {
 
 .custom-image {
   transition: all .2s ease-in-out;
+  cursor: pointer;
 }
 
 .custom-image:hover {

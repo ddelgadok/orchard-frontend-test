@@ -4,7 +4,7 @@
       <v-col cols="12" lg="4" order-lg="2" class="pa-8 main-content-container">
         <section>
           <v-row no-gutters>
-            <v-col cols="12" class="title-container">
+            <v-col cols="12">
               <h1>
                 {{ t('$vuetify.custom.cookingDescriptionTitle') }}
               </h1>
@@ -36,7 +36,7 @@
       </v-col>
       <v-col cols="12" lg="8" order-lg="1">
         <v-row no-gutters>
-          <v-col cols="12" lg="6">
+          <v-col cols="12" lg="6" class="fadeInUp-animation">
             <div class="custom-image-container">
               <v-img
                 src="/images/first-image.png"
@@ -46,14 +46,14 @@
             </div>
           </v-col>
           <v-col cols="12" lg="6" class="side-images-container">
-            <div class="half-height-image custom-image-container">
+            <div class="half-height-image custom-image-container fadeInUp-animation">
               <v-img
                 src="/images/second-image.png"
                 class="custom-image"
                 @click="HandleImageClick('/images/second-image.png')"
               />
             </div>
-            <div class="half-height-image custom-image-container">
+            <div class="half-height-image custom-image-container fadeInUp-animation">
               <v-img
                 src="/images/third-image.png"
                 class="custom-image"
@@ -98,14 +98,17 @@ defineComponent({
   justify-content: center;
 }
 
-.title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 h1 {
   text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: 1.5px;
+  text-align: left;
+  color: #fff;
+  animation: fadeIn 8s;
 }
 
 .cooking-description {
@@ -117,6 +120,7 @@ h1 {
   letter-spacing: normal;
   text-align: left;
   color: #fff;
+  animation: fadeIn 8s;
 }
 
 .the-perfect-egg-title {
@@ -162,5 +166,29 @@ h1 {
 
 .custom-image:hover {
   transform: scale(1.1);
+}
+
+.fadeInUp-animation {
+  animation: 1.5s fadeInUp;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

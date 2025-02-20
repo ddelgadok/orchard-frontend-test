@@ -37,19 +37,24 @@
       <v-col cols="12" lg="8" order-lg="1">
         <v-row no-gutters>
           <v-col cols="12" lg="6">
-            <v-img
-              src="/images/first-image.png"
-            />
-          </v-col>
-          <v-col cols="12" lg="6" class="a">
-            <div class="b">
+            <div class="custom-image-container">
               <v-img
-                src="/images/second-image.png"
+                src="/images/first-image.png"
+                class="custom-image"
               />
             </div>
-            <div class="c">
+          </v-col>
+          <v-col cols="12" lg="6" class="a">
+            <div class="b custom-image-container">
+              <v-img
+                src="/images/second-image.png"
+                class="custom-image"
+              />
+            </div>
+            <div class="c custom-image-container">
               <v-img
                 src="/images/third-image.png"
+                class="custom-image"
               />
             </div>
           </v-col>
@@ -134,5 +139,17 @@ h1 {
 .c {
   background-color: lightgreen;
   flex: 0.5;
+}
+
+.custom-image-container {
+  overflow: hidden;
+}
+
+.custom-image {
+  transition: all .2s ease-in-out;
+}
+
+.custom-image:hover {
+  transform: scale(1.1);
 }
 </style>

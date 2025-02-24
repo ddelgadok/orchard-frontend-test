@@ -30,3 +30,7 @@ And this is it! hope you like this test, i made it with love, hope joining to th
 Best regards
 
 Daniel Delgado
+
+
+Important note: since i had problems trying to export the Figma Images i decided put other images in High Quality in order to unblock my exercise and presenting this as professional way
+

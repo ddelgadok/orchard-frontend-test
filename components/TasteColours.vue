@@ -1,5 +1,5 @@
 <template>
-  <article class="article-container">
+  <article class="article-container mb-8">
     <v-row no-gutters>
       <v-col cols="12" class="mb-12">
         <h2>
@@ -11,7 +11,7 @@
           <v-col
             cols="12"
             lg="4"
-            class="color-container"
+            class="color-container mb-8"
           >
             <div class="custom-image-container mb-4">
               <v-img
@@ -31,8 +31,9 @@
             </a>
           </v-col>
           <v-col
-            cols="12" lg="4"
-            class="color-container"
+            cols="12"
+            lg="4"
+            class="color-container mb-8"
           >
             <div class="custom-image-container mb-4">
               <v-img
@@ -54,13 +55,13 @@
           <v-col
             cols="12"
             lg="4"
-            class="color-container"
+            class="color-container mb-8"
           >
-            <div class="custom-image-container">
+            <div class="custom-image-container mb-4">
               <v-img
                 src="/images/white-image.jpg"
                 alt="White"
-                class="custom-image mb-4"
+                class="custom-image"
                 @click="HandleImageClick('/images/white-image.jpg')"
               />
             </div>

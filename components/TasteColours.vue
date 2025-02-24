@@ -1,10 +1,10 @@
 <template>
   <article class="article-container mb-8">
     <v-row no-gutters>
-      <v-col cols="12" class="mb-12">
+      <v-col cols="12" class="mb-12 taste-title-container">
         <h2>
           {{ t('$vuetify.custom.tasteColoursTitle') }}
-        </h2>
+        </h2>        
       </v-col>
       <v-col cols="12">
         <v-row>
@@ -125,6 +125,7 @@ defineComponent({
 h2 {
   text-align: center;
   text-transform: uppercase;
+  border-bottom: 1px solid #fff;
 }
 
 .color-container {
@@ -169,5 +170,10 @@ a {
   letter-spacing: normal;
   text-align: center;
   color: #fff;
+}
+
+.taste-title-container {
+  display: flex;
+  justify-content: center;
 }
 </style>

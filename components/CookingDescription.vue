@@ -39,25 +39,25 @@
           <v-col cols="12" lg="6" class="fadeInUp-animation">
             <div class="custom-image-container">
               <v-img
-                src="/images/first-image.png"
+                src="/images/first-image.jpg"
                 class="custom-image"
-                @click="HandleImageClick('/images/first-image.png')"
+                @click="HandleImageClick('/images/first-image.jpg')"
               />
             </div>
           </v-col>
           <v-col cols="12" lg="6" class="side-images-container">
             <div class="half-height-image custom-image-container fadeInUp-animation">
               <v-img
-                src="/images/second-image.png"
+                src="/images/second-image.jpg"
                 class="custom-image"
-                @click="HandleImageClick('/images/second-image.png')"
+                @click="HandleImageClick('/images/second-image.jpg')"
               />
             </div>
             <div class="half-height-image custom-image-container fadeInUp-animation">
               <v-img
-                src="/images/third-image.png"
+                src="/images/third-image.jpg"
                 class="custom-image"
-                @click="HandleImageClick('/images/third-image.png')"
+                @click="HandleImageClick('/images/third-image.jpg')"
               />
             </div>
           </v-col>

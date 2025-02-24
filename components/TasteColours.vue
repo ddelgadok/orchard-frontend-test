@@ -15,10 +15,10 @@
           >
             <div class="custom-image-container mb-4">
               <v-img
-                src="/images/red-image.png"
+                src="/images/red-image.jpg"
                 alt="Red"
                 class="custom-image"
-                @click="HandleImageClick('/images/red-image.png')"
+                @click="HandleImageClick('/images/red-image.jpg')"
               />
             </div>
             <a @click="HandleItemClick($event, 'red')">
@@ -36,10 +36,10 @@
           >
             <div class="custom-image-container mb-4">
               <v-img
-                src="/images/green-image.png"
+                src="/images/green-image.jpg"
                 alt="Green"
                 class="custom-image"
-                @click="HandleImageClick('/images/green-image.png')"
+                @click="HandleImageClick('/images/green-image.jpg')"
               />
             </div>
             <a @click="HandleItemClick($event, 'green')">
@@ -58,10 +58,10 @@
           >
             <div class="custom-image-container">
               <v-img
-                src="/images/white-image.png"
+                src="/images/white-image.jpg"
                 alt="White"
                 class="custom-image mb-4"
-                @click="HandleImageClick('/images/white-image.png')"
+                @click="HandleImageClick('/images/white-image.jpg')"
               />
             </div>
             <a @click="HandleItemClick($event, 'white')">

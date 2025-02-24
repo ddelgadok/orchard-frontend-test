@@ -13,66 +13,72 @@
             lg="4"
             class="color-container mb-8"
           >
-            <div class="custom-image-container mb-4">
-              <v-img
-                src="/images/red-image.jpg"
-                alt="Red"
-                class="custom-image"
-                @click="HandleImageClick('/images/red-image.jpg')"
-              />
-            </div>
-            <a @click="HandleItemClick($event, 'red')">
-              <h3 class="item-title">
-                {{ t('$vuetify.custom.red') }}
-              </h3>
-              <p class="item-description">
-                {{ t('$vuetify.custom.redDescription') }}
-              </p>
-            </a>
+            <section>
+              <div class="custom-image-container mb-4">
+                <v-img
+                  src="/images/red-image.jpg"
+                  alt="Red"
+                  class="custom-image"
+                  @click="HandleImageClick('/images/red-image.jpg')"
+                />
+              </div>
+              <a @click="HandleItemClick($event, 'red')">
+                <h3 class="item-title">
+                  {{ t('$vuetify.custom.red') }}
+                </h3>
+                <p class="item-description">
+                  {{ t('$vuetify.custom.redDescription') }}
+                </p>
+              </a>
+            </section>
           </v-col>
           <v-col
             cols="12"
             lg="4"
             class="color-container mb-8"
           >
-            <div class="custom-image-container mb-4">
-              <v-img
-                src="/images/green-image.jpg"
-                alt="Green"
-                class="custom-image"
-                @click="HandleImageClick('/images/green-image.jpg')"
-              />
-            </div>
-            <a @click="HandleItemClick($event, 'green')">
-              <h3 class="item-title">
-                {{ t('$vuetify.custom.green') }}
-              </h3>
-              <p class="item-description">
-                {{ t('$vuetify.custom.greenDescription') }}
-              </p>
-            </a>       
+            <section>
+              <div class="custom-image-container mb-4">
+                <v-img
+                  src="/images/green-image.jpg"
+                  alt="Green"
+                  class="custom-image"
+                  @click="HandleImageClick('/images/green-image.jpg')"
+                />
+              </div>
+              <a @click="HandleItemClick($event, 'green')">
+                <h3 class="item-title">
+                  {{ t('$vuetify.custom.green') }}
+                </h3>
+                <p class="item-description">
+                  {{ t('$vuetify.custom.greenDescription') }}
+                </p>
+              </a>
+            </section>
           </v-col>
           <v-col
             cols="12"
             lg="4"
             class="color-container mb-8"
           >
-            <div class="custom-image-container mb-4">
-              <v-img
-                src="/images/white-image.jpg"
-                alt="White"
-                class="custom-image"
-                @click="HandleImageClick('/images/white-image.jpg')"
-              />
-            </div>
-            <a @click="HandleItemClick($event, 'white')">
-              <h3 class="item-title">
-                {{ t('$vuetify.custom.white') }}
-              </h3>
-              <p class="item-description">
-                {{ t('$vuetify.custom.whiteDescription') }}
-              </p>
-            </a>
+            <section>
+              <div class="custom-image-container mb-4">
+                <v-img
+                  src="/images/white-image.jpg"
+                  alt="White"
+                  class="custom-image"
+                  @click="HandleImageClick('/images/white-image.jpg')"
+                />
+              </div>
+              <a @click="HandleItemClick($event, 'white')">
+                <h3 class="item-title">
+                  {{ t('$vuetify.custom.white') }}
+                </h3>
+                <p class="item-description">
+                  {{ t('$vuetify.custom.whiteDescription') }}
+                </p>
+              </a>
+            </section>
           </v-col>
         </v-row>
       </v-col>

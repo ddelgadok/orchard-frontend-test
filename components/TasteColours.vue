@@ -17,9 +17,9 @@
               <div class="custom-image-container mb-4">
                 <v-img
                   src="/images/red-image.jpg"
-                  alt="Red"
+                  alt="Red image"
                   class="custom-image"
-                  @click="HandleImageClick('/images/red-image.jpg')"
+                  @click="HandleImageClick('/images/red-image.jpg', 'Red image')"
                 />
               </div>
               <a @click="HandleItemClick($event, 'red')">
@@ -41,9 +41,9 @@
               <div class="custom-image-container mb-4">
                 <v-img
                   src="/images/green-image.jpg"
-                  alt="Green"
+                  alt="Green image"
                   class="custom-image"
-                  @click="HandleImageClick('/images/green-image.jpg')"
+                  @click="HandleImageClick('/images/green-image.jpg', 'Green image')"
                 />
               </div>
               <a @click="HandleItemClick($event, 'green')">
@@ -65,9 +65,9 @@
               <div class="custom-image-container mb-4">
                 <v-img
                   src="/images/white-image.jpg"
-                  alt="White"
+                  alt="White image"
                   class="custom-image"
-                  @click="HandleImageClick('/images/white-image.jpg')"
+                  @click="HandleImageClick('/images/white-image.jpg', 'White image')"
                 />
               </div>
               <a @click="HandleItemClick($event, 'white')">
@@ -85,7 +85,7 @@
     </v-row>
     <v-dialog v-model="showModal" max-width="600">
       <v-card clas="pa-8">
-        <v-img :src="modalImagePath" />
+        <v-img :src="modalImagePath" :alt="modalImageAlt" />
       </v-card>
     </v-dialog>
   </article>
@@ -100,13 +100,16 @@ const showModal = ref(false);
 
 const modalImagePath = ref('');
 
+const modalImageAlt = ref('');
+
 function HandleItemClick(e: Event, target: string) {
   console.log(`${target} element has been clicked with the following event: `, e);
 }
 
-function HandleImageClick(path: string) {
+function HandleImageClick(path: string, alt: string) {
   showModal.value = true;
   modalImagePath.value = path;
+  modalImageAlt.value = alt;
 }
 
 defineComponent({

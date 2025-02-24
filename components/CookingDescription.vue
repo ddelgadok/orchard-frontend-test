@@ -41,7 +41,8 @@
               <v-img
                 src="/images/first-image.jpg"
                 class="custom-image"
-                @click="HandleImageClick('/images/first-image.jpg')"
+                alt="First image of the perfect egg"
+                @click="HandleImageClick('/images/first-image.jpg', 'First image of the perfect egg')"
               />
             </div>
           </v-col>
@@ -50,14 +51,16 @@
               <v-img
                 src="/images/second-image.jpg"
                 class="custom-image"
-                @click="HandleImageClick('/images/second-image.jpg')"
+                alt="Second image of the perfect egg"
+                @click="HandleImageClick('/images/second-image.jpg', 'Second image of the perfect egg')"
               />
             </div>
             <div class="half-height-image custom-image-container fadeInUp-animation">
               <v-img
                 src="/images/third-image.jpg"
                 class="custom-image"
-                @click="HandleImageClick('/images/third-image.jpg')"
+                alt="Third image of the perfect egg"
+                @click="HandleImageClick('/images/third-image.jpg', 'Third image of the perfect egg')"
               />
             </div>
           </v-col>
@@ -66,7 +69,7 @@
     </v-row>
     <v-dialog v-model="showModal" max-width="600">
       <v-card clas="pa-8">
-        <v-img :src="modalImagePath" />
+        <v-img :src="modalImagePath" :alt="modalImageAlt" />
       </v-card>
     </v-dialog>
   </article>
@@ -81,9 +84,12 @@ const showModal = ref(false);
 
 const modalImagePath = ref('');
 
-function HandleImageClick(path: string) {
+const modalImageAlt = ref('');
+
+function HandleImageClick(path: string, alt: string) {
   showModal.value = true;
   modalImagePath.value = path;
+  modalImageAlt.value = alt;
 }
 
 defineComponent({
